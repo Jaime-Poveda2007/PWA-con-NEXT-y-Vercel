@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -30,19 +30,19 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <header className="max-w-6xl mx-auto flex items-center justify-between p-4">
-         <nav className="max-w-6xl mx-auto flex items-center justify betwenn p-4">
-          <div className="flex gap-4">
-            <link href="/"
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition"
-            >
-              Home
-            </link>
-            <link href="/Favoritos"
-              className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition"
-            >
-              Favoritos
-            </link>
-          </div>
+          <nav className="max-w-6xl mx-auto flex items-center justify-between p-4">
+            <div className="flex gap-4">
+              <Link href="/"
+                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition"
+              >
+                Home
+              </Link>
+              <Link href="/Favoritos"
+                className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition"
+              >
+                Favoritos
+              </Link>
+            </div>
           </nav>
         </header>
       </body>
